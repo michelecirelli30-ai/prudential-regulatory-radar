@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Collect public prudential publication metadata; no automated legal conclusions."""
-import json, re, html, hashlib, urllib.request, urllib.parse, datetime, pathlib, xml.etree.ElementTree as ET
+import json, re, html, hashlib, urllib.request, urllib.parse, datetime, pathlib, email.utils, xml.etree.ElementTree as ET
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SOURCES=[
 ("EBA consultations","EBA","Regulatory pipeline","https://www.eba.europa.eu/publications-and-media/consultations","html"),
@@ -11,7 +11,7 @@ SOURCES=[
 ("FMA news","FMA","Regulatory pipeline","https://www.fma.gv.at/en/category/news-en/feed/","rss"),
 ("OeNB press","OeNB","Risk outlook","https://www.oenb.at/news-und-events/presse.html","html")]
 FILTER=re.compile(r"\b(bank|banking|prudential|supervisory|srep|crr|crd|credit|capital|liquidity|risk|governance|regulatory|reporting|financial stability|finanzstabilität|banken|kredit|eigenmittel|aufsicht|risiko|meldewesen|liquidität)\b",re.I)
-EXCLUDE=re.compile(r"\b(dora|insurance|pension|crypto|fraudulent|scam|payment services)\b",re.I)
+EXCLUDE=re.compile(r"\b(dora|insurance|pension|crypto|fraudulent|scam|payment services|investment firms|dgs payouts|credit servicers|micar|esma)\b",re.I)
 LINK=re.compile(r'<a\b[^>]*\bhref=["\x27]([^"\x27]+)["\x27][^>]*>(.*?)</a>',re.I|re.S)
 TAGS=re.compile(r'<[^>]+>')
 def clean(s):return re.sub(r'\s+',' ',html.unescape(TAGS.sub(' ',s))).strip()
@@ -20,6 +20,25 @@ def topic(s):
  for keys,name in [(('capital','own funds','crr','eigenmittel'),'Capital & CRR3'),(('liquidity','lcr','nsfr','liquidität'),'Liquidity'),(('credit','npl','kredit'),'Credit risk'),(('reporting','corep','meldewesen'),'Regulatory reporting'),(('operational risk',),'Operational risk')]:
   if any(k in s for k in keys):return name
  return 'Governance & SREP'
+def relevant(name,title,url):
+ """Require a publication-style document link, not institutional navigation."""
+ if not FILTER.search(title) or EXCLUDE.search(title):return False
+ path=urllib.parse.urlsplit(url).path.lower()
+ if name=="EBA consultations":
+  return path.startswith("/publications-and-media/events/consultation")
+ if name=="EBA publications":
+  return path.startswith("/publications-and-media/publications/") or path.startswith("/risk-and-data-analysis/risk-analysis/risk-monitoring/")
+ if name=="ECB supervision":
+  return bool(re.search(r"/press/(?:pr|speeches)/date/20\d{2}/|/press/blog/20\d{2}/|/activities/srep/20\d{2}/|/framework/priorities/html/ssm[.]supervisory_priorities",path))
+ if name=="ECB newsletter":
+  return "/press/supervisory-newsletters/newsletter/" in path and path.endswith(".en.html")
+ if name=="ECB sanctions":
+  return "/activities/sanctions/supervisory-sanctions/" in path and path.endswith(".en.html")
+ if name=="FMA news":
+  return bool(re.search(r"\b(banking|banks|credit institutions|capital requirements|crr|crd|bwg|srep|prudential)\b",title,re.I))
+ if name=="OeNB press":
+  return path.startswith("/news-und-events/presse/") and bool(FILTER.search(title))
+ return False
 def scan(source):
  name,authority,track,base,kind=source
  req=urllib.request.Request(base,headers={"User-Agent":"PrudentialRadarResearch/0.3 (weekly metadata-only)","Accept":"text/html, application/rss+xml, application/xml"})
@@ -36,21 +55,24 @@ def scan(source):
    items.append((clean(title),urllib.parse.urljoin(base,html.unescape(href)),''))
  found={}
  for title,url,published in items:
-  if len(title)<23 or len(title)>320 or not FILTER.search(title) or EXCLUDE.search(title):continue
+  if len(title)<23 or len(title)>320 or not relevant(name,title,url):continue
   parsed=urllib.parse.urlsplit(url)
   if parsed.scheme!='https' or not any((parsed.hostname or '')==h or (parsed.hostname or '').endswith('.'+h) for h in ('eba.europa.eu','bankingsupervision.europa.eu','fma.gv.at','oenb.at')):continue
   url=urllib.parse.urlunsplit((parsed.scheme,parsed.netloc,parsed.path.rstrip('/'),'', ''))
   if not url or url==base.rstrip('/') or url.endswith(('.pdf','.zip','.xlsx')):continue
   id='AUTO-'+hashlib.sha256(url.encode()).hexdigest()[:12].upper()
-  found[url]={"id":id,"title":title,"source":authority,"track":track,"area":topic(title),"url":url,"published":"","discovered_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),"review_state":"Unreviewed · automated discovery","legal_status":"Not assessed — requires analyst review","impact":None,"readiness":None,"urgency":None,"assessment_status":"Unassessed","source_feed":name,"summary":""}
+  pubdate=""
+  if published:
+   try:pubdate=email.utils.parsedate_to_datetime(published).date().isoformat()
+   except (ValueError,TypeError,IndexError):pass
+  found[url]={"id":id,"title":title,"source":authority,"track":track,"area":topic(title),"url":url,"published":pubdate,"discovered_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),"review_state":"Unreviewed · automated discovery","legal_status":"Not assessed — requires analyst review","impact":None,"readiness":None,"urgency":None,"assessment_status":"Unassessed","source_feed":name,"summary":""}
   if len(found)>=45:break
- if not found:raise ValueError("No relevant links extracted: feed or markup may have changed")
  return list(found.values())
 def main():
  base=ROOT/'data';base.mkdir(exist_ok=True)
  queuefile=base/'discovered.json';statusfile=base/'status.json'
  previous=json.loads(queuefile.read_text()) if queuefile.exists() else []
- by_url={d['url']:d for d in previous}
+ by_url={d['url']:d for d in previous if relevant(d.get('source_feed',''),d.get('title',''),d.get('url',''))}
  now=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
  statuses={};successful=0;added=0
  for s in SOURCES:
@@ -58,7 +80,7 @@ def main():
    docs=scan(s);successful+=1;fresh=0
    for d in docs:
     if d['url'] not in by_url:by_url[d['url']]=d;fresh+=1;added+=1
-   statuses[s[0]]={"state":"ok","checked_utc":now,"matching_items":len(docs),"new_items":fresh,"url":s[3]}
+   statuses[s[0]]={"state":"ok" if docs else "no_matches","checked_utc":now,"matching_items":len(docs),"new_items":fresh,"url":s[3]}
    print("OK",s[0],len(docs),fresh)
   except Exception as e:
    statuses[s[0]]={"state":"error","checked_utc":now,"error":str(e)[:200],"url":s[3]}
