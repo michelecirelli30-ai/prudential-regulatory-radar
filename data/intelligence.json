@@ -1,0 +1,231 @@
+{
+  "year": 2026,
+  "editorial_as_of": "2026-10-17",
+  "snapshot": "2026-10-17",
+  "coverage": "ECB public supervisory sanctions (including NCA sanctions published on the ECB register at the ECB's request). Excludes other national-authority sanctions, unpublished or deferred decisions and enforcement outside prudential banking supervision.",
+  "executive_summary": "In 2026, EU prudential supervision is moving from implementing capital reforms toward demonstrating effective risk management. CRR3 and CRD6 remain central, especially risk-weighted assets, the output floor and sound lending standards. The EBA plans further Banking Package implementation, simplification and supervisory convergence. The ECB prioritises geopolitical resilience, credit quality and operational robustness. Banking indicators remain strong, but commercial real estate, smaller firms, private credit links and energy-related shocks create concentrated vulnerabilities. For Austrian institutions, priorities include tracking forthcoming technical standards, assessing regulatory changes early, reviewing reporting controls and documenting implementation readiness. Consultation proposals should never be treated as binding law.",
+  "executive_source_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "sources": [
+    {
+      "id": "R1",
+      "authority": "EBA",
+      "title": "EBA Work Programme 2027",
+      "published": "2026-09-30",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-its-2027-work-programme",
+      "use": "Banking Package implementation, simplification, supervisory convergence"
+    },
+    {
+      "id": "R2",
+      "authority": "ECB Banking Supervision",
+      "title": "Supervisory priorities 2026–2028",
+      "published": "2025",
+      "url": "https://www.bankingsupervision.europa.eu/framework/priorities/html/ssm.supervisory_priorities202511.en.html",
+      "use": "Geopolitical resilience, sound lending, CRR III implementation and operational resilience"
+    },
+    {
+      "id": "R3",
+      "authority": "EBA",
+      "title": "Risk Assessment Report — June 2026",
+      "published": "2026-06",
+      "url": "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
+      "use": "Asset quality, funding, geopolitical spillovers and NBFI/private-credit vulnerabilities"
+    },
+    {
+      "id": "R4",
+      "authority": "ECB Banking Supervision",
+      "title": "Supervisory Banking Statistics — Q2 2026",
+      "published": "2026-09-15",
+      "url": "https://www.bankingsupervision.europa.eu/press/pr/date/2026/html/ssm.pr260915~7917ca1416.en.html",
+      "use": "CET1, NPL, LCR and ROE supervisory statistics"
+    },
+    {
+      "id": "R5",
+      "authority": "EBA",
+      "title": "CRR3/CRD6 dashboard — Q2 2026",
+      "published": "2026-10-09",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-crr3crd6-dashboard-shows-banks-maintain-capital-levels-well-above-minimum-requirements-under",
+      "use": "Projected fully loaded CET1 and output floor impact"
+    },
+    {
+      "id": "R6",
+      "authority": "ECB Banking Supervision",
+      "title": "2026 Geopolitical Risk Reverse Stress Test",
+      "published": "2026-07-31",
+      "url": "https://www.bankingsupervision.europa.eu/press/pr/date/2026/html/ssm.pr260731~93964644b0.en.html",
+      "use": "Supervisory evaluation of geopolitical stress-testing weaknesses"
+    },
+    {
+      "id": "S1",
+      "authority": "ECB Banking Supervision",
+      "title": "Published supervisory sanctions and statistics",
+      "published": "Live register",
+      "url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html",
+      "use": "Official register of ECB sanctions and NCAs at ECB request"
+    }
+  ],
+  "sanctions": {
+    "year": 2026,
+    "records": [
+      {
+        "id": "ECB-2026-06-19-BIL",
+        "decision_date": "2026-06-19",
+        "institution": "Banque Internationale à Luxembourg S.A.",
+        "authority": "ECB",
+        "jurisdiction": "Luxembourg",
+        "area": "Own funds / internal models",
+        "amounts_eur": [
+          3255000
+        ],
+        "status": "Final",
+        "basis": "Breach of ECB internal model decision; ELBE approach and CET1 deduction.",
+        "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260629_publication_template.en.pdf",
+        "source_id": "S1"
+      },
+      {
+        "id": "ECB-2026-02-20-BOFA",
+        "decision_date": "2026-02-20",
+        "institution": "BofA Securities Europe SA",
+        "authority": "ECB",
+        "jurisdiction": "France",
+        "area": "Prudential reporting / market-risk RWA",
+        "amounts_eur": [
+          6200000
+        ],
+        "status": "Final",
+        "basis": "Inaccurate market-risk RWA and reported capital ratios; CRR Art. 430(1)(a).",
+        "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260327_publication_template.en.pdf",
+        "source_id": "S1"
+      },
+      {
+        "id": "ECB-2026-02-10-JPM",
+        "decision_date": "2026-02-10",
+        "institution": "J.P. Morgan SE",
+        "authority": "ECB",
+        "jurisdiction": "Germany",
+        "area": "Prudential reporting",
+        "amounts_eur": [
+          10150000,
+          2030000
+        ],
+        "status": "Final",
+        "basis": "Two separate monetary penalties under a single published decision row; refer to the original publication for legal details.",
+        "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260219_publication_template_DEJPM.en.pdf",
+        "source_id": "S1"
+      },
+      {
+        "id": "ECB-2026-01-29-NORDEA",
+        "decision_date": "2026-01-29",
+        "institution": "Nordea Finance Finland Ltd",
+        "authority": "ECB",
+        "jurisdiction": "Finland",
+        "area": "Large exposures / reporting",
+        "amounts_eur": [
+          2260000
+        ],
+        "status": "Final",
+        "basis": "Breaches of large exposure limits and reporting requirements; CRR Arts. 394 and 395(1).",
+        "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260310_publication_template.en.pdf",
+        "source_id": "S1"
+      }
+    ],
+    "last_verified": "2026-10-17",
+    "register_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html",
+    "source_state": "Editorial verification against official ECB register",
+    "audit_note": "Four ECB decision rows, five monetary penalties. One J.P. Morgan decision contains two distinct penalties. Decision dates, not publication dates, determine the year.",
+    "automatic_update": "Pending first weekly index re-check"
+  },
+  "outlook": {
+    "period": "2026 / latest available",
+    "as_of": "2026-10-17",
+    "summary": "Capitalisation and profitability remain robust, while asset-quality pockets, geopolitical spillovers and increasingly connected non-bank exposures warrant granular monitoring. This is a sector-level outlook, not a bank-specific compliance or credit rating.",
+    "metrics": [
+      {
+        "label": "CET1 ratio",
+        "value": "16.00%",
+        "period": "ECB SIs · Q2 2026",
+        "source_ids": [
+          "R4"
+        ]
+      },
+      {
+        "label": "NPL ratio",
+        "value": "2.17%",
+        "period": "ECB SIs · Q2 2026",
+        "source_ids": [
+          "R4"
+        ]
+      },
+      {
+        "label": "Return on equity",
+        "value": "10.73%",
+        "period": "ECB SIs · Q2 2026",
+        "source_ids": [
+          "R4"
+        ]
+      },
+      {
+        "label": "Liquidity coverage",
+        "value": "154.91%",
+        "period": "ECB SIs · Q2 2026",
+        "source_ids": [
+          "R4"
+        ]
+      }
+    ],
+    "themes": [
+      {
+        "title": "Credit quality / CRE / SMEs",
+        "signal": "Heightened monitoring",
+        "text": "Aggregate NPLs remain low, but CRE, SME and consumer credit exposures require granular monitoring; ECB Q2 2026 SME NPLs rose quarter-on-quarter.",
+        "source_ids": [
+          "R3",
+          "R4",
+          "R2"
+        ]
+      },
+      {
+        "title": "Geopolitical and energy shocks",
+        "signal": "High supervisory focus",
+        "text": "EBA points to second-round energy-cost and sectoral impacts. ECB's 2026 reverse stress test identified weaknesses in some banks’ internal stress-testing frameworks.",
+        "source_ids": [
+          "R3",
+          "R6",
+          "R2"
+        ]
+      },
+      {
+        "title": "Non-bank links / private credit",
+        "signal": "Emerging structural exposure",
+        "text": "EBA reports rising exposures to non-bank financial institutions and concentration in larger banks. Look through correlated exposures and valuation practices.",
+        "source_ids": [
+          "R3"
+        ]
+      },
+      {
+        "title": "Capital reform / output floor",
+        "signal": "Implementation watch",
+        "text": "EBA’s CRR3/CRD6 dashboard estimates a 15.1% fully loaded CET1 ratio for its sample and a greater output-floor effect than in the preceding edition.",
+        "source_ids": [
+          "R5",
+          "R2",
+          "R1"
+        ]
+      },
+      {
+        "title": "Funding resilience",
+        "signal": "Watch volatility",
+        "text": "Funding and liquidity remain robust but market repricing and competition for stable funding could constrain planned balance-sheet growth.",
+        "source_ids": [
+          "R3",
+          "R4"
+        ]
+      }
+    ]
+  }
+}
