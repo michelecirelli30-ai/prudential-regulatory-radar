@@ -353,5 +353,88 @@
         "L6"
       ]
     }
-  ]
+  ],
+  "consultations": {
+    "scope": "EBA and European Commission prudential/banking consultations; current, recently closed, or explicitly linked to pending adoption. This register is a vetted starting set, not an exhaustive claim for all historical or non-indexed consultations.",
+    "reviewed_as_of": "2026-10-17",
+    "records": [
+      {
+        "id": "EBA-CP-01",
+        "authority": "EBA",
+        "title": "Draft RTS on operational risk management framework",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-draft-rts-operational-risk-management-framework",
+        "deadline": "2026-12-31",
+        "status": "Open",
+        "area": "Operational risk / CRR",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "EBA-CP-02",
+        "authority": "EBA",
+        "title": "Revised ITS on institution-specific joint prudential decisions",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-revised-implementing-technical-standards-joint-decisions-institution-specific",
+        "deadline": "2027-01-04",
+        "status": "Open",
+        "area": "SREP / CRD",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "EBA-CP-03",
+        "authority": "EBA",
+        "title": "ITS benchmarking of internal approaches — 2027 market risk",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-amending-its-benchmarking-approaches-calculating-own-funds-requirements-2027-market",
+        "deadline": "",
+        "status": "Status review",
+        "area": "Capital / market risk",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "EBA-CP-04",
+        "authority": "EBA",
+        "title": "Draft RTS on specialised lending exposures",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-regulatory-technical-standards-specialised-lending-exposures",
+        "deadline": "",
+        "status": "Status review",
+        "area": "Credit risk",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "EBA-CP-05",
+        "authority": "EBA",
+        "title": "ITS on credit risk and IFRS 9 benchmarking reporting",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-draft-its-amending-commission-implementing-regulation-eu-20243117-regarding-credit-risk",
+        "deadline": "",
+        "status": "Status review",
+        "area": "Reporting",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "EBA-CP-06",
+        "authority": "EBA",
+        "title": "ITS supervisory reporting simplification package",
+        "url": "https://www.eba.europa.eu/publications-and-media/events/consultation-implementing-technical-standards-supervisory-reporting-simplification-package",
+        "deadline": "",
+        "status": "Status review",
+        "area": "Reporting",
+        "verification": "Editorial check · 2026-10-17"
+      },
+      {
+        "id": "COM-CP-01",
+        "authority": "European Commission",
+        "title": "Targeted consultation on competitiveness of the EU banking sector",
+        "url": "https://finance.ec.europa.eu/regulation-and-supervision/consultations-0/targeted-consultation-competitiveness-eu-banking-sector-2026_en",
+        "deadline": "2026-04-19",
+        "status": "Closed · followed by July Communication",
+        "area": "Banking framework",
+        "verification": "Editorial check · 2026-10-17"
+      }
+    ],
+    "retired": [
+      {
+        "title": "EBA 2025 consultation on revised SREP Guidelines",
+        "reason": "Final Guidelines published in June 2026",
+        "source_id": "L7"
+      }
+    ]
+  }
 }
