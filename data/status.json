@@ -1,8 +1,58 @@
 {
-  "last_run_utc": null,
-  "last_success_utc": null,
-  "sources": {},
-  "new_items_last_run": 0,
-  "total_discovered": 0,
-  "note": "Weekly refresh not activated"
+  "last_run_utc": "2026-10-17T21:27:04+00:00",
+  "last_success_utc": "2026-10-17T21:27:04+00:00",
+  "sources": {
+    "EBA consultations": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 20,
+      "new_items": 20,
+      "url": "https://www.eba.europa.eu/publications-and-media/consultations"
+    },
+    "EBA publications": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 10,
+      "new_items": 0,
+      "url": "https://www.eba.europa.eu/publications-and-media/publications"
+    },
+    "ECB supervision": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 30,
+      "new_items": 30,
+      "url": "https://www.bankingsupervision.europa.eu/home/html/index.en.html"
+    },
+    "ECB newsletter": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 19,
+      "new_items": 0,
+      "url": "https://www.bankingsupervision.europa.eu/press/supervisory-newsletters/newsletter/html/index.en.html"
+    },
+    "ECB sanctions": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 20,
+      "new_items": 1,
+      "url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html"
+    },
+    "FMA news": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 2,
+      "new_items": 2,
+      "url": "https://www.fma.gv.at/en/category/news-en/feed/"
+    },
+    "OeNB press": {
+      "state": "ok",
+      "checked_utc": "2026-10-17T21:27:04+00:00",
+      "matching_items": 3,
+      "new_items": 3,
+      "url": "https://www.oenb.at/news-und-events/presse.html"
+    }
+  },
+  "new_items_last_run": 56,
+  "total_discovered": 56,
+  "note": "7/7 sources checked; discovered items remain unassessed."
 }
