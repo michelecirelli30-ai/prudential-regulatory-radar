@@ -3,13 +3,16 @@
   "editorial_as_of": "2026-10-17",
   "snapshot": "2026-10-17",
   "coverage": "ECB public supervisory sanctions (including NCA sanctions published on the ECB register at the ECB's request). Excludes other national-authority sanctions, unpublished or deferred decisions and enforcement outside prudential banking supervision.",
-  "executive_summary": "In 2026, EU prudential supervision is moving from implementing capital reforms toward demonstrating effective risk management. CRR3 and CRD6 remain central, especially risk-weighted assets, the output floor and sound lending standards. The EBA plans further Banking Package implementation, simplification and supervisory convergence. The ECB prioritises geopolitical resilience, credit quality and operational robustness. Banking indicators remain strong, but commercial real estate, smaller firms, private credit links and energy-related shocks create concentrated vulnerabilities. For Austrian institutions, priorities include tracking forthcoming technical standards, assessing regulatory changes early, reviewing reporting controls and documenting implementation readiness. Consultation proposals should never be treated as binding law.",
+  "executive_summary": "During 2026, the EU banking framework moved from Basel III implementation to targeted recalibration. CRD VI national transposition was due by 10 January, while the Commission recorded incomplete implementation in several Member States, including Austria. In June, the Commission adopted temporary FRTB relief, published in September and applicable from January 2027. Its July banking competitiveness Communication followed a February–April consultation and signalled legislative proposals for early 2027. EBA consultations meanwhile advanced SREP coordination, operational-risk governance, supervisory reporting and credit-risk standards. ECB supervision emphasised resilience, asset quality and geopolitical risks. Pending proposals remain non-binding; adopted measures require distinct legal application-date tracking.",
   "executive_source_ids": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
     "R1",
-    "R2",
-    "R3",
-    "R4",
-    "R5"
+    "R2"
   ],
   "sources": [
     {
@@ -67,6 +70,62 @@
       "published": "Live register",
       "url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html",
       "use": "Official register of ECB sanctions and NCAs at ECB request"
+    },
+    {
+      "id": "L1",
+      "authority": "EUR-Lex",
+      "title": "Directive (EU) 2024/1619 (CRD VI) — Art. 2 transposition",
+      "published": "2024-06-19",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024L1619",
+      "use": "10 January 2026 transposition deadline; some application exceptions"
+    },
+    {
+      "id": "L2",
+      "authority": "European Commission",
+      "title": "CRD VI transposition status (7 August 2026)",
+      "published": "2026-08-07",
+      "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/enforcement-and-infringements-banking-and-finance-law/monitoring-banking-and-finance-directives/capital-requirements-directive-vi_en",
+      "use": "Austria partial measures notified and Commission country monitoring"
+    },
+    {
+      "id": "L3",
+      "authority": "EUR-Lex",
+      "title": "Delegated Regulation (EU) 2026/1221 — FRTB temporary relief",
+      "published": "2026-09-11",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R1221",
+      "use": "Adopted June, published September, applicable January 2027"
+    },
+    {
+      "id": "L4",
+      "authority": "European Commission",
+      "title": "Targeted consultation on EU banking competitiveness",
+      "published": "2026-02-11",
+      "url": "https://finance.ec.europa.eu/regulation-and-supervision/consultations-0/targeted-consultation-competitiveness-eu-banking-sector-2026_en",
+      "use": "February–April 2026 consultation, now closed"
+    },
+    {
+      "id": "L5",
+      "authority": "European Commission",
+      "title": "July 2026 banking competitiveness Communication",
+      "published": "2026-07-17",
+      "url": "https://finance.ec.europa.eu/publications/commission-outlines-measures-strengthen-europes-banking-sector-and-support-growth_en",
+      "use": "Policy Communication, not an enacted amendment"
+    },
+    {
+      "id": "L6",
+      "authority": "European Commission",
+      "title": "Banking competitiveness factsheet / Q1 2027 roadmap",
+      "published": "2026-07-17",
+      "url": "https://finance.ec.europa.eu/regulation-and-supervision/savings-and-investments-union/factsheet-stronger-europe-through-more-competitive-banking-sector_en",
+      "use": "Planned Q1 2027 measures; not yet legislative text"
+    },
+    {
+      "id": "L7",
+      "authority": "EBA",
+      "title": "Final revised SREP Guidelines — June 2026",
+      "published": "2026-06-26",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-reaches-another-important-milestone-enhancing-supervisory-efficiency-its-revised-srep-guidelines",
+      "use": "The 2025 SREP consultation has progressed to finalised Guidelines"
     }
   ],
   "sanctions": {
@@ -227,5 +286,72 @@
         ]
       }
     ]
-  }
+  },
+  "legislative_process": [
+    {
+      "date": "2026-01-10",
+      "title": "CRD VI transposition deadline",
+      "stage": "Transposition / monitoring",
+      "effect": "National transposition deadline; most measures apply 11 January, with exceptions.",
+      "source_ids": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "date": "2026-02-11",
+      "title": "Commission banking competitiveness consultation",
+      "stage": "Consultation · now closed",
+      "effect": "Consultation ran until 19 April and informed the July Communication.",
+      "source_ids": [
+        "L4"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Commission adopts FRTB temporary relief",
+      "stage": "Adopted · future application",
+      "effect": "Regulation (EU) 2026/1221 published 11 September; applies 1 January 2027.",
+      "source_ids": [
+        "L3"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "title": "EBA finalises revised SREP Guidelines",
+      "stage": "Finalised Guidelines",
+      "effect": "Retire earlier SREP consultation from pending-drafts monitoring.",
+      "source_ids": [
+        "L7"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Banking competitiveness Communication",
+      "stage": "Communication · not legislation",
+      "effect": "Commission sets simplification and competitiveness reform direction.",
+      "source_ids": [
+        "L5",
+        "L6"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "title": "EBA consultation: institution-specific prudential decisions",
+      "stage": "Open consultation",
+      "effect": "Draft ITS on supervisory joint decisions; deadline 4 January 2027.",
+      "source_ids": [
+        "R1"
+      ]
+    },
+    {
+      "date": "2027-Q1",
+      "title": "Future EU banking measures proposed",
+      "stage": "Planned · not yet proposed",
+      "effect": "Commission indicated Q1 2027 policy proposals; no enacted obligations.",
+      "source_ids": [
+        "L6"
+      ]
+    }
+  ]
 }
