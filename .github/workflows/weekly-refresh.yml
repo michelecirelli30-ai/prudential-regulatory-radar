@@ -15,6 +15,8 @@ jobs:
           python-version: '3.12'
       - name: Collect public source metadata and update dashboard
         run: python scripts/collect.py
+      - name: Refresh current-year report and ECB sanctions
+        run: python scripts/annual_refresh.py
       - name: Commit refreshed data
         run: |
           git config user.name "github-actions[bot]"
