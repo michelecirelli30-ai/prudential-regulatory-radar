@@ -65,14 +65,14 @@ def scan(source):
   if published:
    try:pubdate=email.utils.parsedate_to_datetime(published).date().isoformat()
    except (ValueError,TypeError,IndexError):pass
-  found[url]={"id":id,"title":title,"source":authority,"track":track,"area":topic(title),"url":url,"published":pubdate,"discovered_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),"review_state":"Unreviewed · automated discovery","legal_status":"Not assessed — requires analyst review","impact":None,"readiness":None,"urgency":None,"assessment_status":"Unassessed","source_feed":name,"summary":""}
+  found[url]={"id":id,"title":title,"source":authority,"track":track,"area":topic(title),"url":url,"published":pubdate,"discovered_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),"review_state":"Unverified candidate · check consultation lifecycle (not confirmed open)","legal_status":"Not assessed — requires analyst review","impact":None,"readiness":None,"urgency":None,"assessment_status":"Unassessed — may be closed or superseded","source_feed":name,"summary":""}
   if len(found)>=45:break
  return list(found.values())
 def main():
  base=ROOT/'data';base.mkdir(exist_ok=True)
  queuefile=base/'discovered.json';statusfile=base/'status.json'
  previous=json.loads(queuefile.read_text()) if queuefile.exists() else []
- by_url={d['url']:d for d in previous if relevant(d.get('source_feed',''),d.get('title',''),d.get('url',''))}
+ by_url={d['url']:d for d in previous if relevant(d.get('source_feed',''),d.get('title',''),d.get('url','')) and not ('srep guidelines' in d.get('title','').lower() and 'consultation' in d.get('title','').lower())}
  now=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
  statuses={};successful=0;added=0
  for s in SOURCES:
@@ -97,6 +97,10 @@ def main():
  if not m:raise RuntimeError('Dashboard payload marker missing')
  payload=json.loads(m.group(1))
  payload['discovered']=list(by_url.values());payload['status']=status
+ # The verified editorial register is maintained separately: discovery never promotes a proposal to active law.
+ intelligence_file=base/'intelligence.json'
+ if intelligence_file.exists():
+  payload['intelligence_last_editorial_review']=json.loads(intelligence_file.read_text()).get('editorial_as_of')
  new=json.dumps(payload,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e')
  content=re.sub(pattern,lambda _: 'const PAYLOAD='+new+';</script>',content,count=1,flags=re.S)
  page.write_text(content)
