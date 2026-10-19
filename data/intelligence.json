@@ -2,7 +2,7 @@
   "year": 2026,
   "editorial_as_of": "2026-10-17",
   "snapshot": "2026-10-17",
-  "coverage": "ECB public supervisory sanctions (including NCA sanctions published on the ECB register at the ECB's request). Excludes other national-authority sanctions, unpublished or deferred decisions and enforcement outside prudential banking supervision.",
+  "coverage": "Only decisions published in the ECB supervisory sanctions register, including NCA decisions at ECB request. Other NCA/FMA sanctions and unpublished decisions excluded.",
   "executive_summary": "During 2026, the EU banking framework moved from Basel III implementation to targeted recalibration. CRD VI national transposition was due by 10 January, while the Commission recorded incomplete implementation in several Member States, including Austria. In June, the Commission adopted temporary FRTB relief, published in September and applicable from January 2027. Its July banking competitiveness Communication followed a February–April consultation and signalled legislative proposals for early 2027. EBA consultations meanwhile advanced SREP coordination, operational-risk governance, supervisory reporting and credit-risk standards. ECB supervision emphasised resilience, asset quality and geopolitical risks. Pending proposals remain non-binding; adopted measures require distinct legal application-date tracking.",
   "executive_source_ids": [
     "L1",
@@ -132,72 +132,79 @@
     "year": 2026,
     "records": [
       {
-        "id": "ECB-2026-06-19-BIL",
+        "id": "ECB-2026-c96875d708f3",
         "decision_date": "2026-06-19",
         "institution": "Banque Internationale à Luxembourg S.A.",
         "authority": "ECB",
-        "jurisdiction": "Luxembourg",
-        "area": "Own funds / internal models",
+        "jurisdiction": "See publication",
+        "area": "Own funds",
         "amounts_eur": [
           3255000
         ],
         "status": "Final",
-        "basis": "Breach of ECB internal model decision; ELBE approach and CET1 deduction.",
+        "basis": "See the linked official publication for the legal basis and decision details.",
         "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260629_publication_template.en.pdf",
         "source_id": "S1"
       },
       {
-        "id": "ECB-2026-02-20-BOFA",
+        "id": "ECB-2026-b7c895552c09",
         "decision_date": "2026-02-20",
         "institution": "BofA Securities Europe SA",
         "authority": "ECB",
-        "jurisdiction": "France",
-        "area": "Prudential reporting / market-risk RWA",
+        "jurisdiction": "See publication",
+        "area": "Reporting",
         "amounts_eur": [
           6200000
         ],
         "status": "Final",
-        "basis": "Inaccurate market-risk RWA and reported capital ratios; CRR Art. 430(1)(a).",
+        "basis": "See the linked official publication for the legal basis and decision details.",
         "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260327_publication_template.en.pdf",
         "source_id": "S1"
       },
       {
-        "id": "ECB-2026-02-10-JPM",
+        "id": "ECB-2026-6cf4288b1877",
         "decision_date": "2026-02-10",
         "institution": "J.P. Morgan SE",
         "authority": "ECB",
-        "jurisdiction": "Germany",
-        "area": "Prudential reporting",
+        "jurisdiction": "See publication",
+        "area": "Reporting",
         "amounts_eur": [
           10150000,
           2030000
         ],
         "status": "Final",
-        "basis": "Two separate monetary penalties under a single published decision row; refer to the original publication for legal details.",
+        "basis": "See the linked official publication for the legal basis and decision details.",
         "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260219_publication_template_DEJPM.en.pdf",
         "source_id": "S1"
       },
       {
-        "id": "ECB-2026-01-29-NORDEA",
+        "id": "ECB-2026-3bc906343903",
         "decision_date": "2026-01-29",
         "institution": "Nordea Finance Finland Ltd",
         "authority": "ECB",
-        "jurisdiction": "Finland",
-        "area": "Large exposures / reporting",
+        "jurisdiction": "See publication",
+        "area": "Large exposures/Reporting",
         "amounts_eur": [
-          2260000
+          2260000,
+          890000,
+          410000,
+          5000,
+          200000,
+          210000,
+          2500000,
+          1750000
         ],
         "status": "Final",
-        "basis": "Breaches of large exposure limits and reporting requirements; CRR Arts. 394 and 395(1).",
+        "basis": "See the linked official publication for the legal basis and decision details.",
         "document_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/shared/pdf/ssm.20260310_publication_template.en.pdf",
         "source_id": "S1"
       }
     ],
-    "last_verified": "2026-10-17",
+    "last_verified": "2026-10-19",
     "register_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html",
-    "source_state": "Editorial verification against official ECB register",
+    "source_state": "Automated ECB public register check succeeded",
     "audit_note": "Four ECB decision rows, five monetary penalties. One J.P. Morgan decision contains two distinct penalties. Decision dates, not publication dates, determine the year.",
-    "automatic_update": "Pending first weekly index re-check"
+    "automatic_update": "Weekly source table reconciliation"
   },
   "outlook": {
     "period": "2026 / latest available",
@@ -436,5 +443,15 @@
         "source_id": "L7"
       }
     ]
+  },
+  "annual_monitoring": {
+    "year": 2026,
+    "last_run_utc": "2026-10-19T08:04:18+00:00",
+    "ecb_sanctions_state": "success",
+    "ecb_sanctions_error": null,
+    "ecb_last_verified": "2026-10-19",
+    "sanctions_decisions_count": 4,
+    "sanctions_penalties_count": 12,
+    "report_mode": "reviewed_editorial"
   }
 }
