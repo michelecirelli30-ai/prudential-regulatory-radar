@@ -304,5 +304,23 @@
     "assessment_status": "Unassessed",
     "source_feed": "ECB supervision",
     "summary": ""
+  },
+  {
+    "id": "AUTO-83648F863B06",
+    "title": "Patrick Montagner: Stress testing in a changing risk environment",
+    "source": "ECB / SSM",
+    "track": "Supervisory signals",
+    "area": "Governance & SREP",
+    "url": "https://www.bankingsupervision.europa.eu/press/speeches/date/2026/html/ssm.sp261023~32ca63a9d1.en.html",
+    "published": "",
+    "discovered_utc": "2026-10-26T08:07:14+00:00",
+    "review_state": "Unverified candidate · check consultation lifecycle (not confirmed open)",
+    "legal_status": "Not assessed — requires analyst review",
+    "impact": null,
+    "readiness": null,
+    "urgency": null,
+    "assessment_status": "Unassessed — may be closed or superseded",
+    "source_feed": "ECB supervision",
+    "summary": ""
   }
 ]

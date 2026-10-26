@@ -200,7 +200,7 @@
         "source_id": "S1"
       }
     ],
-    "last_verified": "2026-10-19",
+    "last_verified": "2026-10-26",
     "register_url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html",
     "source_state": "Automated ECB public register check succeeded",
     "audit_note": "Four ECB decision rows, five monetary penalties. One J.P. Morgan decision contains two distinct penalties. Decision dates, not publication dates, determine the year.",
@@ -446,10 +446,10 @@
   },
   "annual_monitoring": {
     "year": 2026,
-    "last_run_utc": "2026-10-19T08:04:18+00:00",
+    "last_run_utc": "2026-10-26T08:07:18+00:00",
     "ecb_sanctions_state": "success",
     "ecb_sanctions_error": null,
-    "ecb_last_verified": "2026-10-19",
+    "ecb_last_verified": "2026-10-26",
     "sanctions_decisions_count": 4,
     "sanctions_penalties_count": 12,
     "report_mode": "reviewed_editorial"
