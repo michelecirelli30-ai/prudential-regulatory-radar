@@ -322,5 +322,23 @@
     "assessment_status": "Unassessed — may be closed or superseded",
     "source_feed": "ECB supervision",
     "summary": ""
+  },
+  {
+    "id": "AUTO-20F2DC3F40D9",
+    "title": "Volkswirtschaft 27. Oktober 2026 Presseaussendung OeNB: Österreichs Banken erwarten weiteren Anstieg der Kreditnachfrage",
+    "source": "OeNB",
+    "track": "Risk outlook",
+    "area": "Credit risk",
+    "url": "https://www.oenb.at/news-und-events/presse/presseaussendungen/2026/20261027.html",
+    "published": "",
+    "discovered_utc": "2026-11-02T08:34:06+00:00",
+    "review_state": "Unverified candidate · check consultation lifecycle (not confirmed open)",
+    "legal_status": "Not assessed — requires analyst review",
+    "impact": null,
+    "readiness": null,
+    "urgency": null,
+    "assessment_status": "Unassessed — may be closed or superseded",
+    "source_feed": "OeNB press",
+    "summary": ""
   }
 ]
