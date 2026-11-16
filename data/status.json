@@ -1,57 +1,58 @@
 {
-  "last_run_utc": "2026-11-09T08:40:02+00:00",
-  "last_success_utc": "2026-11-09T08:40:02+00:00",
+  "last_run_utc": "2026-11-16T09:55:20+00:00",
+  "last_success_utc": "2026-11-16T09:55:20+00:00",
   "sources": {
     "EBA consultations": {
       "state": "ok",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 7,
       "new_items": 0,
       "url": "https://www.eba.europa.eu/publications-and-media/consultations"
     },
     "EBA publications": {
       "state": "no_matches",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 0,
       "new_items": 0,
       "url": "https://www.eba.europa.eu/publications-and-media/publications"
     },
     "ECB supervision": {
       "state": "ok",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 11,
-      "new_items": 3,
+      "new_items": 0,
       "url": "https://www.bankingsupervision.europa.eu/home/html/index.en.html"
     },
     "ECB newsletter": {
       "state": "no_matches",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 0,
       "new_items": 0,
       "url": "https://www.bankingsupervision.europa.eu/press/supervisory-newsletters/newsletter/html/index.en.html"
     },
     "ECB sanctions": {
       "state": "no_matches",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 0,
       "new_items": 0,
       "url": "https://www.bankingsupervision.europa.eu/activities/sanctions/supervisory-sanctions/html/index.en.html"
     },
     "FMA news": {
-      "state": "error",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
-      "error": "The read operation timed out",
+      "state": "no_matches",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
+      "matching_items": 0,
+      "new_items": 0,
       "url": "https://www.fma.gv.at/en/category/news-en/feed/"
     },
     "OeNB press": {
       "state": "ok",
-      "checked_utc": "2026-11-09T08:40:02+00:00",
+      "checked_utc": "2026-11-16T09:55:20+00:00",
       "matching_items": 1,
       "new_items": 0,
       "url": "https://www.oenb.at/news-und-events/presse.html"
     }
   },
-  "new_items_last_run": 3,
+  "new_items_last_run": 0,
   "total_discovered": 22,
-  "note": "6/7 sources checked; discovered items remain unassessed."
+  "note": "7/7 sources checked; discovered items remain unassessed."
 }
